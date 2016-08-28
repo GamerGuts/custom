@@ -21,6 +21,11 @@
         "gives you an old cookie that was left out in the rain, it's moldy.",
         "bakes you fresh cookies, it smells amazing."
     ],
+    "aliens": [
+        "Pew! Pew! Pew! Die humans!"
+        "I think it's safe to assume it isn't a zombie."
+        "You still don't understand what you're dealing with, do you? Perfect organism. Its structural perfection is matched only by its hostility."
+    ],
     "balls": [
         "Signs point to yes.",
         "Yes.",
@@ -204,4 +209,5 @@
     "website": "\/me Please visit our website: %%LINK%%",
     "youtube": "\/me [%%NAME%%] Subscribe to us on youtube: %%LINK%%",
     "songstatistics": "\/me %%ARTIST%% - %%TITLE%%: %%WOOTS%%W\/%%GRABS%%G\/%%MEHS%%M."
+    "twitch": "\/me [%%NAME%%] Follow us on Twitch: %%LINK%%",
 }
