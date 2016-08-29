@@ -1,7 +1,7 @@
 (function () {
 
     // Change this to your GitHub username so you don't have to modify so many things.
-    var fork = "basicBot";
+    var fork = "GamerGuts";
 
     // Define our function responsible for extending the bot.
     function extend() {
@@ -36,7 +36,22 @@
               API.sendChat("/me Bacon!!!");
             }
           }
-        };
+        },
+                    alienCommand: {
+                command: 'alien',
+                rank: 'user',
+                type: 'exact',
+                getAlien: function (chat) {}
+                    var c = Math.floor(Math.random() * basicBot.chat.aliens.length
+                functionality: function (chat, cmd) {
+                            if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
+                            if (!bot.commands.executable(this.rank, chat)) return void (0);
+                            else {
+                    return API.sendChat(subChat(basicBot.chat.alien, {alien: this.getAlien()}));
+                    }
+                     
+                }
+            };
 
         // Load the chat package again to account for any changes
         bot.loadChat();
@@ -46,19 +61,19 @@
     //Change the bots default settings and make sure they are loaded on launch
 
     localStorage.setItem("basicBotsettings", JSON.stringify({
-      botName: "basicBot",
+      botName: "PartyBot",
       language: "english",
       chatLink: "https://rawgit.com/basicBot/source/master/lang/en.json",
       scriptLink: "https://rawgit.com/basicBot/source/master/basicBot.js",
       roomLock: false, // Requires an extension to re-load the script
-      startupCap: 1, // 1-200
-      startupVolume: 0, // 0-100
-      startupEmoji: false, // true or false
+      startupCap: 200, // 1-200
+      startupVolume: 50, // 0-100
+      startupEmoji: true, // true or false
       autowoot: true,
       autoskip: false,
       smartSkip: true,
-      cmdDeletion: true,
-      maximumAfk: 120,
+      cmdDeletion: false,
+      maximumAfk: 90,
       afkRemoval: true,
       maximumDc: 60,
       bouncerPlus: true,
@@ -72,10 +87,12 @@
       voteSkipLimit: 10,
       historySkip: false,
       timeGuard: true,
-      maximumSongLength: 10,
+      maximumSongLength: 7,
       autodisable: true,
-      commandCooldown: 30,
+      commandCooldown: 15,
       usercommandsEnabled: true,
+      thorCommand: true,
+      thorCooldown: 300,
       skipPosition: 3,
       skipReasons: [
       ["theme", "This song does not fit the room theme. "],
@@ -98,11 +115,12 @@
       rulesLink: null,
       themeLink: null,
       fbLink: null,
-      youtubeLink: null,
-      website: null,
+      twitchLink: "https://www.twitch.tv/mcpartyzone"
+      youtubeLink: "https://www.youtube.com/user/mcpartyzone",
+      website: "https://mcpz.net/home/",
       intervalMessages: [],
       messageInterval: 5,
-      songstats: true,
+      songstats: false,
       commandLiteral: "!",
       blacklists: {
         NSFW: "https://rawgit.com/basicBot/custom/master/blacklists/NSFWlist.json",
