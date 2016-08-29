@@ -16,24 +16,7 @@
         // Load custom settings set below
         bot.retrieveSettings();
 
-        //Extend the bot here, either by calling another function or here directly.
-        bot.commands.alienCommand = {
-            command: 'alien',
-            rank: 'user',
-            type: 'exact',
-            getAlien: function (chat) {
-                var c = Math.floor(Math.random() * basicBot.chat.aliens.length);
-                return basicBot.chat.aliens[c];
-            },
-                functionality: function (chat, cmd) {
-                            if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
-                            if (!bot.commands.executable(this.rank, chat)) return void (0);
-                            else {
-                    return API.sendChat("oooweeeooo");
-                    }
-                     
-                }
-            }
+        //Extend the bot here, either by calling another function or here directly:
 
         // You can add more spam words to the bot.
         var spamWords = ['spam1', 'spam2', 'spam3', 'spam4'];
@@ -52,6 +35,23 @@
             else {
               API.sendChat("/me Bacon!!!");
             }
+          }
+        };
+        bot.commands.alienCommand = {
+          command: 'alien',
+          rank: 'user',
+          type: 'exact',
+          getAlien: function (chat) {
+            var c = Math.floor(Math.random() * basicBot.chat.aliens.length);
+            return basicBot.chat.aliens[c];
+          },
+          functionality: function (chat, cmd) {
+            if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
+            if (!bot.commands.executable(this.rank, chat)) return void (0);
+            else {
+              return API.sendChat("oooweeeooo");
+              }
+                     
           }
         };
         // Load the chat package again to account for any changes
