@@ -37,21 +37,22 @@
             }
           }
         },
-                    alienCommand: {
-                command: 'alien',
-                rank: 'user',
-                type: 'exact',
-                getAlien: function (chat) {}
-                    var c = Math.floor(Math.random() * basicBot.chat.aliens.length
-                functionality: function (chat, cmd) {
-                            if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
-                            if (!bot.commands.executable(this.rank, chat)) return void (0);
-                            else {
+        alienCommand: {
+            command: 'alien',
+            rank: 'user',
+            type: 'exact',
+            getAlien: function (chat) {
+                var c = Math.floor(Math.random() * basicBot.chat.aliens.length);
+                return basicBot.chat.aliens[c];
+            functionality: function (chat, cmd) {
+                if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
+                if (!bot.commands.executable(this.rank, chat)) return void (0);
+                else {
                     return API.sendChat(subChat(basicBot.chat.alien, {alien: this.getAlien()}));
                     }
-                     
                 }
-            };
+            }
+        };
 
         // Load the chat package again to account for any changes
         bot.loadChat();
