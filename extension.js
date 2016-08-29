@@ -100,7 +100,6 @@
       rulesLink: null,
       themeLink: null,
       fbLink: null,
-      twitchLink: "https://www.twitch.tv/mcpartyzone"
       youtubeLink: "https://www.youtube.com/user/mcpartyzone",
       website: "https://mcpz.net/home/",
       intervalMessages: [],
