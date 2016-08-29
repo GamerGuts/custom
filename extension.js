@@ -17,8 +17,6 @@
         bot.retrieveSettings();
 
         //Extend the bot here, either by calling another function or here directly:
-    var basicBot = {
-        commands: {
             alienCommand = {
                 command: 'alien',
                 rank: 'user',
@@ -35,8 +33,6 @@
                     }
                 }
             };
-        }
-    }
         // You can add more spam words to the bot.
         var spamWords = ['spam1', 'spam2', 'spam3', 'spam4'];
         for (var i = 0; i < spamWords.length; i++) {
