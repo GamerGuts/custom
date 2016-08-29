@@ -16,7 +16,7 @@
         // Load custom settings set below
         bot.retrieveSettings();
 
-        //Extend the bot here, either by calling another function or here directly:
+        //Extend the bot here, either by calling another function or here directly.
 
         // You can add more spam words to the bot.
         var spamWords = ['spam1', 'spam2', 'spam3', 'spam4'];
@@ -37,7 +37,7 @@
             }
           }
         };
-        
+
         // Load the chat package again to account for any changes
         bot.loadChat();
 
@@ -57,7 +57,7 @@
       autowoot: true,
       autoskip: false,
       smartSkip: true,
-      cmdDeletion: false,
+      cmdDeletion: true,
       maximumAfk: 90,
       afkRemoval: true,
       maximumDc: 60,
@@ -74,10 +74,8 @@
       timeGuard: true,
       maximumSongLength: 7,
       autodisable: true,
-      commandCooldown: 15,
+      commandCooldown: 30,
       usercommandsEnabled: true,
-      thorCommand: true,
-      thorCooldown: 300,
       skipPosition: 3,
       skipReasons: [
       ["theme", "This song does not fit the room theme. "],
