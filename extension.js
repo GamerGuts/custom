@@ -95,7 +95,7 @@
       etaRestriction: false,
       welcome: true,
       opLink: null,
-      rulesLink: null,
+      rulesLink: "https://mcpz.net/threads/plug-dj-rules.31518/",
       themeLink: null,
       fbLink: null,
       youtubeLink: "https://www.youtube.com/user/mcpartyzone",
