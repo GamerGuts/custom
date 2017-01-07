@@ -39,16 +39,16 @@
         };
 
         bot.commands.pbotCommand = {
-            command: 'pbot',
-            rank: 'user',
-            type: 'exact',
-            functionality: function (chat, cmd) {
-                if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
-                if (!basicBot.commands.executable(this.rank, chat)) return void (0);
-                else {
-                    API.sendChat("/me @%%NAME%% screamed PartyBot's name into the distance. After a moment passed, @%%NAME%% got the answer they were looking for. \"Sup.\"");
-                }
+          command: 'pbot',
+          rank: 'user',
+          type: 'exact',
+          functionality: function (chat, cmd) {
+            if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
+            if (!basicBot.commands.executable(this.rank, chat)) return void (0);
+            else {
+              API.sendChat("/me @%%NAME%% screamed PartyBot's name into the distance. After a moment passed, @%%NAME%% got the answer they were looking for. \"Sup.\"");
             }
+          }
         };
 
         // Load the chat package again to account for any changes
