@@ -1,13 +1,13 @@
 {
     "1":{
-        "mid": "1:OPsongID1"
+        "mid": "1:BANNEDsongID1"
     },
     "2":{
-        "title": "This is a OP song",
-        "author": "The OP band",
-        "mid": "1:OPsongID2"
+        "title": "This is a BANNED song",
+        "author": "The BANNED band",
+        "mid": "1:BANNEDsongID2"
     },
     "3":{
-        "mid": "1:OPsongID3"
+        "mid": "1:BANNEDsongID3"
     }
 }
